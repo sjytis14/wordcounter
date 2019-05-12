@@ -1,9 +1,51 @@
-<h1>안녕하세요 여기서 글자를 세세요!</h1>
+{% load static %}
+<head>
+    <title>WORDCOUNTER</title>
+    
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
 
-<a href="{% url 'about' %}">ABOUT</a>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{% url 'home' %}">Wordcounter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav">
+                <a class="nav-item nav-link active" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-item nav-link" href="{% url 'about' %}">About</a>
+                <a class="nav-item nav-link" href="https://www.instagram.com/">Contact</a>
+            </div>
+        </div>
+    </nav>
+    <div class="page-wrapper">
+        <header class="main-header">
+            <h1 class="master-title">Wordcounter</h1>
+        </header>
 
-<form action="{% url 'result' %}">
-    <textarea name="fulltext" id="" cols="40" rows="10"></textarea>
-    <br>
-    <input type="submit" value="Count!"></input>
-</form>
+        <section id="main-section">
+            <div class="card bg-light border-dark mb-3">
+                <div class="card-header">
+                    <h5 class="card-title">본문을 입력하세요.</h5>
+                </div>
+                <div class="card-body text-dark">
+                    <form action="{% url 'result' %}">
+                        <textarea name="fulltext" cols="85" rows="10"></textarea>
+                        <br>
+                        <input type="submit" value="Count!" class="btn btn-outline-primary"></input>
+                    </form>                        
+                </div>
+            </div> 
+        </section>
+
+        <hr>
+        <footer id="main-footer">
+            Created by 임서정
+        </footer>
+    </div>
+</body>

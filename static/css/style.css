@@ -1,0 +1,85 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:'나눔고딕','NanumGothic','맑은 고딕','Gothic';
+}
+
+
+body{
+    width:960px;
+    background-color: #E6E6E6;
+    margin:auto;
+}
+
+h1{
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    font-size: 40px;
+    color: #212529;
+}
+
+.card-title{
+    padding-top:10px;
+}
+
+section {
+    margin: 0 auto;
+    width:80%;
+}
+
+textarea{
+    display: block;
+    margin: 0 auto;
+}
+
+.page-wrapper{
+    background-color: #ffffff;
+    margin:40px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 6px rgba(100,100,100,0.3);
+}
+
+.maind-header{
+    padding:40px 50px;
+}
+
+.master-title{
+    color:#181818;
+    text-align: center;
+    padding: 30px;
+}
+
+p.about{
+    padding: 30px 100px 80px;
+}
+
+a{
+    display:block;
+    color:#0779bf;  
+    text-align:center;
+}
+
+a:hover{
+    text-decoration: none;
+}
+
+.alert{
+    margin:20px 0;
+    width:100%;
+}
+
+.input, .word_count{
+    margin-top:10px;
+    margin-bottom:30px;
+}
+
+.input.h2, .word_count.h2{
+    font-size:40px;
+    font-weight: 300;
+}
+
+footer{
+    font-size:10px;
+    color:#666666;
+}
